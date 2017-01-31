@@ -160,6 +160,12 @@ education.display = function() {
     // }
 };
 
+var HTMLgame = '<ul id="game" class="flex-column">'
+                +'<li class="flex-item"><span class="white-text"><iframe src="./game/ball_drop.html" name="bestgameever" width="750" height="230" frameborder="0" scrolling="no"><p>Your browser does not support iframes.</p></iframe></span></li>'
+                // +'<li class="flex-item"><span class="white-text">Use keyboard xxx for play</span></li>'
+                +'</ul>';
+$("#header").append(HTMLgame);
+
 education.display();
 projects.display();
 $("#mapDiv").append(googleMap);

@@ -146,7 +146,11 @@ ul#topContacts a, ul#footerContacts a {
 }
 
 .flex-column {
-  display: flex;
+  /*display: flex;*/
+  display: inline-block;
+  vertical-align:top;
+  /**display: inline;*/
+  /* */
   flex-direction: column;
   flex-wrap: nowrap;
   padding: 10px;
