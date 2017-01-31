@@ -8,8 +8,13 @@ var bio = {
         "location": "Montreal, Quebec",
         "linkedin": "https://www.linkedin.com/in/yan-ren-ryan"
     },
-    "skills": ["Language: Java, C/C++, Python, VHDL, MATLAB", "OS: Linux", "Tools: Git, SQL and PostgreSQL, TestNG", "Web: HTML, CSS, JavaScript"],
-    "bioPic": "./images/yan_.jpg"
+    "skills": ["Languages: Java, C/C++, Python, VHDL, MATLAB",
+              "OS: Linux",
+              "Web: HTML, CSS, JavaScript, jQuery",
+              "Tools: Git, SQL and PostgreSQL, TestNG, OpenCV",
+              "IDEs: Eclipse, Pycharm, Visual Studio"
+            ],
+    "bioPic": "./images/yan2.jpg"
 };
 
 var education = {
@@ -92,11 +97,13 @@ function displayHeader() {
     var formattedLocation = HTMLlocation.replace("%data%", bio.contacts.location);
     var formattedGithub = HTMLgithub.replace("%data%", "<a class=\"\" href=\"" + bio.contacts.github + "\" target=\"_blank\">" + "yan-ren" + "</a>");
     var formattedLinkedin = HTMLlinkedin.replace("%data%", "<a class=\"\" href=\"" + bio.contacts.linkedin + "\" target=\"_blank\">" + "Yan Ren" + "</a>");
+    var downloadResume = '<li class="flex-item"><span class="orange-text"></span><span class="white-text"><a class="" href="./resume.html" target="_self">View in PDF</a></span></li>';
     $("#header").prepend(formattedRole).prepend(formattedName).append(formattedImage);
     $("#topContacts").append(formattedLocation);
     $("#topContacts").append(formattedEmail);
     $("#topContacts").append(formattedGithub);
     $("#topContacts").append(formattedLinkedin);
+      $("#topContacts").append(downloadResume);
     $("#header").append(HTMLskillsStart);
     if (bio.skills.length > 0) {
         bio.skills.forEach(function(skill) {

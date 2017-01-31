@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Yan Ren</title>
+    <meta name="description" content="This is Yan Ren's resume website">
+    <meta http-equiv="author" content="Yan Ren">
+    <script src="js/jQuery.js"></script>
+    <style>
+        #printableView {
+            opacity: 0.8;
+        }
+
+        #printableView:hover {
+            opacity: 1.0;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container" style="text-align: center;">
+        <div style="display: inline-block; width: 850px;">
+            <div style="float: left;">
+                <a id="printableView" target="_self" href="./index.html" style="text-decoration: none;">
+                    <img src="./images/previous.png" style="height: 30px; vertical-align: middle;" />
+                    <span style="margin-left: 5px; font-weight: bold;">Go back</span>
+                </a>
+            </div>
+            <div style="float: right;">
+                <a id="printableView" target="_blank" href="./CV2017_02_Yan.pdf" style="text-decoration: none;">
+                    <img src="./images/pdf-icon.png" style="height: 30px; vertical-align: middle;" /><span style="margin-left: 5px; font-weight: bold;">Printable View</span>
+                </a>
+            </div>
+            <br />
+            <embed src="./CV2017_02_Yan.pdf" style="width: 850px; height: 1150px; margin-top: 20px;" />
+        </div>
+    </div>
+</body>
+
+</html>
