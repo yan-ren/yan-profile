@@ -166,13 +166,25 @@ education.display = function() {
     //     });
     // }
 };
-
-var HTMLgame = '<ul id="game" class="flex-column">'
-                +'<li class="flex-item"><span class="white-text"><iframe src="./game/ball_drop.html" name="bestgameever" width="750" height="230" frameborder="0" scrolling="no"><p>Your browser does not support iframes.</p></iframe></span></li>'
+function embedGame(){
+	var HTMLgame = '<ul id="game" class="flex-column">'
+                +'<li class="flex-item"><iframe src="./game/ball_drop.html" id="myIframe" width=580px height=230px frameborder="0" scrolling="no"><p>Your browser does not support iframes.</p></iframe></li>'
                 // +'<li class="flex-item"><span class="white-text">Use keyboard xxx for play</span></li>'
                 +'</ul>';
-$("#header").append(HTMLgame);
+	var topContacts = document.getElementById('topContacts').offsetWidth;
+	console.log(topContacts);
+	var skills = document.getElementById('skills').offsetWidth;
+	console.log(skills);
+	var biopic = document.getElementById('biopic').offsetWidth;
+	console.log(biopic);
+	var gameWidth = topContacts - skills - biopic;
+	console.log(gameWidth);
+	$("#header").append(HTMLgame);
+	var iframe = parent.document.getElementById("myIframe");
+	iframe.width = gameWidth.toString();
+}
 
+embedGame();
 education.display();
 projects.display();
 $("#mapDiv").append(googleMap);
