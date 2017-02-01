@@ -28,6 +28,9 @@
     <div id="mapDiv">
       <h2>Where I've Lived and Worked</h2>
     </div>
+    <div id="interest" class="gray">
+      <h2>Interest</h2>
+    </div>
     <div id="lets-connect" class="dark-gray">
       <h2 class="orange center-text">Let's Connect</h2>
         <ul id="footerContacts" class="flex-box">
@@ -53,6 +56,9 @@
     }
     if(document.getElementsByClassName('education-entry').length === 0) {
       document.getElementById('education').style.display = 'none';
+    }
+    if(document.getElementsByClassName('interest-entry').length === 0) {
+      document.getElementById('interest').style.display = 'none';
     }
     if(document.getElementsByClassName('flex-item').length === 0) {
       document.getElementById('lets-connect').style.display = 'none';
