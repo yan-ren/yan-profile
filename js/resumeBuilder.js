@@ -44,7 +44,7 @@ var education = {
         "dates": "2017",
         "url": "http://www.sssudacity.com"
     }, {
-        "title": "Intro tsSo Database",
+        "title": "Introduction to Database",
         "school": "Stanford Lagunita",
         "dates": "2016",
         "url": "https://lagunita.stanford.edu"
@@ -53,10 +53,17 @@ var education = {
 
 var work = {
     "jobs": [{
+        "employer": "Vigilant - a DRW Company",
+        "title": "QA AUTOMATION INTERN",
+        "location": "Montreal, QC",
+        "dates": "May 17 - Aug 17",
+        "description": "Python based project DDT automation test case; React/Redux based front-end automation unit test case;<br>PowerShell scripting for TeamCity & Slack integration."
+    },
+    {
         "employer": "Kronos Canadian Systems Inc.",
         "title": "QA AUTOMATION INTERN",
         "location": "Montreal, QC",
-        "dates": "Sept 16 - Present",
+        "dates": "Sept 16 - April 17",
         "description": "Java programming for improving TestNG API automation framework;<br>Agile development of backend automation testing (REST API) under TestNG framework."
     }, {
         "employer": "BioMindR, TandemLaunch Inc.",
@@ -75,11 +82,11 @@ var work = {
 
 var projects = {
     "projects": [{
-        "title": "Personal website",
-        "dates": "Jan 2017",
-        "description": "Created a website using HTML, CSS, JavaScript, jQuery, to exam the learning of web development",
-        "images": ["./images/miao.png"],
-        "link": "https://yan-ren.github.io/WebsiteDemo_Miaomiao"
+        "title": "Speech-to-Text website",
+        "dates": "April 2018",
+        "description": "Worked on Node.js backend with Google Cloud Storage and Google Cloud Speech API, collaborating with Radio Canada Digital R&D team to develop a web based speech-to-text application",
+        "images": ["./images/stt1.png", "./images/stt3.png"],
+        "link": "https://github.com/yan-ren/Speech-to-Text-DesignProject"
     }, {
         "title": "OpenCV Face Recognition and Pose Estimation",
         "dates": "May 2016",
