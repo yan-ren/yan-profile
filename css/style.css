@@ -236,7 +236,7 @@ figure {
   background: #fff url(../images/loader.gif) no-repeat center center;
   width: 100%;
   float: left;
-  margin-bottom: 10em;
+  margin-bottom: 8em;
   clear: both; }
   #hero .flexslider {
     border: none;
@@ -382,7 +382,7 @@ body.offcanvas {
 .services,
 .contact {
   padding-top: 4em;
-  padding-bottom: 9em;
+  padding-bottom: 4em;
   clear: both;
   width: 100%;
   display: block; }
@@ -653,7 +653,8 @@ body.offcanvas {
 .services {
   margin-bottom: 80px;
   position: relative;
-  z-index: 0; }
+  z-index: 0;
+  background-color: #fff;}
   @media screen and (max-width: 768px) {
     .services {
       margin-bottom: 4em; } }
@@ -693,7 +694,7 @@ body.offcanvas {
       display: table-cell;
       vertical-align: middle; }
   .services .desc {
-    margin-top: 60px; }
+    margin-top: 60px;}
     .services .desc h3 {
       font-size: 16px;
       font-weight: 700;
@@ -1030,6 +1031,13 @@ body.offcanvas {
   position: relative;
   clear: both;
   margin-bottom: 5em; }
+
+.content-bg {
+  padding: 3em 0;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center center;
+}
 
 .counters {
   padding: 3em 0;
