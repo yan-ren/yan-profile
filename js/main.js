@@ -329,3 +329,16 @@ function PopupCenter(url, title, w, h) {
     // Puts focus on the newWindow
     if (window.focus) newWindow.focus();
 }
+
+function LoadMore(){
+    var moreText = document.getElementById("load-more");
+    var btnText = document.getElementById("btn-load");
+
+    if (moreText.style.display === "none") {
+        btnText.innerHTML = "Load less";
+        moreText.style.display = "inline";
+    } else {
+        btnText.innerHTML = "Load more <i class=" + "icon-reload" + ">";
+        moreText.style.display = "none";
+    }
+}

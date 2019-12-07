@@ -379,13 +379,19 @@ body.offcanvas {
 .blog,
 .work,
 .about,
-.services,
-.contact {
+.services {
   padding-top: 4em;
   padding-bottom: 4em;
   clear: both;
   width: 100%;
   display: block; }
+.contact {
+  padding-top: 9em;
+  padding-bottom: 9em;
+  clear: both;
+  width: 100%;
+  display: block; }
+
   @media screen and (max-width: 768px) {
     .experience,
     .skills,
