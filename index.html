@@ -1,71 +1,599 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html>
-<head>
-  <meta charset="utf-8">
-  <title>Yan Ren</title>
-  <meta name="description" content="This is Yan Ren's resume website">
-  <meta http-equiv="author" content="Yan Ren">
-  <link rel="shortcut icon" href="./images/favicon.ico">
-  <link rel="stylesheet" href="css/style.css">
-  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyCktpOFiRuMjk7baqDnh7JTijen5bz7VWI"></script>
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-</head>
-<body>
-  <div id="main">
-    <div id="header" class="center-content clear-fix">
-      <ul id="topContacts" class="flex-box"></ul>
-    </div>
-    <div style="clear: both;"></div>
-    <div id="workExperience" class="gray">
-      <h2>Work Experience</h2>
-    </div>
-    <div id="projects">
-      <h2>Projects</h2>
-    </div>
-    <div id="education" class="gray">
-      <h2>Education</h2>
-    </div>
-    <div id="mapDiv">
-      <h2>Where I've Lived and Worked</h2>
-    </div>
-    <div id="interest" class="gray">
-      <h2>Interest</h2>
-    </div>
-    <div id="lets-connect" class="dark-gray">
-      <h2 class="orange center-text">Let's Connect</h2>
-        <ul id="footerContacts" class="flex-box">
-      </ul>
-    </div>
-  </div>
-  <script src="js/jQuery.js"></script>
-  <script src="js/helper.js"></script>
-  <script src="js/resumeBuilder.js"></script>
-<script>
+	<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Yan</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="yan's profile" />
+	<meta name="keywords" content="" />
+	<meta name="author" content="Yan" />
 
-	if(document.getElementsByClassName('flex-item').length === 0) {
-      document.getElementById('topContacts').style.display = 'none';
-    }
-    if(document.getElementsByTagName('h1').length === 0) {
-      document.getElementById('header').style.display = 'none';
-    }
-    if(document.getElementsByClassName('work-entry').length === 0) {
-      document.getElementById('workExperience').style.display = 'none';
-    }
-    if(document.getElementsByClassName('project-entry').length === 0) {
-      document.getElementById('projects').style.display = 'none';
-    }
-    if(document.getElementsByClassName('education-entry').length === 0) {
-      document.getElementById('education').style.display = 'none';
-    }
-    if(document.getElementsByClassName('interest-entry').length === 0) {
-      document.getElementById('interest').style.display = 'none';
-    }
-    if(document.getElementsByClassName('flex-item').length === 0) {
-      document.getElementById('lets-connect').style.display = 'none';
-    }
-    if(document.getElementById('map') === null) {
-      document.getElementById('mapDiv').style.display = 'none';
-    }
-  </script>
-</body>
+  <!-- Facebook and Twitter integration -->
+	<meta property="og:title" content=""/>
+	<meta property="og:image" content=""/>
+	<meta property="og:url" content=""/>
+	<meta property="og:site_name" content=""/>
+	<meta property="og:description" content=""/>
+	<meta name="twitter:title" content="" />
+	<meta name="twitter:image" content="" />
+	<meta name="twitter:url" content="" />
+	<meta name="twitter:card" content="" />
+
+
+	<link rel="shortcut icon" href="./images/favicon.ico">
+
+	<link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700" rel="stylesheet">
+
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="css/animate.css">
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="css/icomoon.css">
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<!-- Flexslider  -->
+	<link rel="stylesheet" href="css/flexslider.css">
+	<!-- Flaticons  -->
+	<link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
+	<!-- Owl Carousel -->
+	<link rel="stylesheet" href="css/owl.carousel.min.css">
+	<link rel="stylesheet" href="css/owl.theme.default.min.css">
+	<!-- Theme style  -->
+	<link rel="stylesheet" href="css/style.css">
+
+	<!-- Modernizr JS -->
+	<script src="js/modernizr-2.6.2.min.js"></script>
+	<!-- FOR IE9 below -->
+	<!--[if lt IE 9]>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+
+	</head>
+	<body>
+	<div id="page">
+		<div class="container-wrap">
+		<a href="#" class="js-nav-toggle nav-toggle" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"><i></i></a>
+		<aside id="aside" role="complementary" class="border js-fullheight">
+			<div class="text-center">
+				<div class="author-img" style="background-image: url(images/about.jpg);"></div>
+				<h1 id="logo"><a href="index.html">Yan Ren</a></h1>
+				<span class="position">Software Developer</span>
+			</div>
+			<nav id="main-menu" role="navigation" class="navbar">
+				<div id="navbar" class="collapse">
+					<ul>
+						<li class="active"><a href="#" data-nav-section="home">Home</a></li>
+						<li><a href="#" data-nav-section="about">About</a></li>
+						<li><a href="#" data-nav-section="skills">Skills</a></li>
+						<li><a href="#" data-nav-section="education">Education</a></li>
+						<li><a href="#" data-nav-section="experience">Experience</a></li>
+						<li><a href="#" data-nav-section="project">Project</a></li>
+						<li><a href="#" data-nav-section="contact">Contact</a></li>
+						<li><a href="#" onclick="PopupCenter('./ball_drop.html','Bouncing Ball','400','500'); ">Suprise!</a></li>
+					</ul>
+				</div>
+			</nav>
+
+			<div class="footer">
+				<ul>
+					<li><a href="https://www.linkedin.com/in/yan-ren-ryan"><i class="icon-linkedin2"></i></a></li>
+				</ul>
+			</div>
+
+		</aside>
+
+		<div id="main">
+			<section id="hero" class="js-fullheight" data-section="home">
+				<div class="flexslider js-fullheight">
+					<ul class="slides">
+				   	<li style="background-image: url(images/img_bg_1.jpg);">
+				   		<div class="overlay"></div>
+				   		<div class="container-fluid">
+				   			<div class="row">
+					   			<div class="col-md-6 col-md-offset-3 col-md-pull-3 col-sm-12 col-xs-12 js-fullheight slider-text" style="float:right">
+					   				<div class="slider-text-inner js-fullheight">
+					   					<div class="desc">
+						   					<h1>Hi! <br>I'm Yan</h1>
+						   					<!-- <h2>100% html5 bootstrap templates Made by <a href="https://colorlib.com/" target="_blank">colorlib.com</a></h2> -->
+												<p><a class="btn btn-primary btn-learn" href="./resume.html">Download CV <i class="icon-download4"></i></a></p>
+											</div>
+					   				</div>
+					   			</div>
+					   		</div>
+				   		</div>
+				   	</li>
+				  	</ul>
+			  	</div>
+			</section>
+
+			<section class="about" data-section="about">
+				<div class="narrow-content">
+					<div class="row">
+						<div class="col-md-12">
+							<div class="row row-bottom-padded-sm animate-box" data-animate-effect="fadeInLeft">
+								<div class="col-md-12">
+									<div class="about-desc">
+										<span class="heading-meta">About Me</span>
+										<h2 class="heading">Who Am I?</h2>
+										<p><strong>Hi I'm Yan Ren</strong> - a Software Developer working in Montreal.</p>
+										<p>I like innovative ideas and am passionate about learning new technologies. Everyday life is like programming, I guess. If you love something you can put beauty into it.</p>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-3 animate-box" data-animate-effect="fadeInLeft">
+									<div class="services color-1">
+										<span class="icon2"><i class="icon-bulb"></i></span>
+										<h3>Innovative Ideas</h3>
+									</div>
+								</div>
+								<div class="col-md-3 animate-box" data-animate-effect="fadeInTop">
+									<div class="services color-3">
+										<span class="icon2"><i class="icon-data"></i></span>
+										<h3>Software</h3>
+									</div>
+								</div>
+								<div class="col-md-3 animate-box" data-animate-effect="fadeInRight">
+									<div class="services color-2">
+										<span class="icon2"><i class="icon-globe-outline"></i></span>
+										<h3>Web</h3>
+									</div>
+								</div>
+								<div class="col-md-3 animate-box" data-animate-effect="fadeInBottom">
+									<div class="services color-4">
+										<span class="icon2"><i class="icon-phone3"></i></span>
+										<h3>Application</h3>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-12 animate-box" data-animate-effect="fadeInLeft">
+									<div class="hire">
+										<h2>Checkout my Github to see the projects I have done!</h2>
+										<a href="https://github.com/yan-ren" class="btn-hire">Checkout</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="services" data-section="skills">
+				<div class="narrow-content">
+					<div class="row">
+						<div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
+							<span class="heading-meta">My Skills</span>
+							<h2 class="heading">Here are some of my expertise</h2>
+						</div>
+					</div>
+					<div class="content-bg" style="background-image: url(images/cover_bg_1.jpg);" data-stellar-background-ratio="0.5">
+						<div class="row row-pt-md">
+							<div class="col-md-4 text-center animate-box">
+								<div class="services color-1">
+									<span class="icon">
+										<i class="icon-bulb"></i>
+									</span>
+									<div class="desc">
+										<h3>Programming Languages</h3>
+										<p>Java<br>
+											Python<br>
+											Perl<br>
+											Golang<br>
+										</p>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-4 text-center animate-box">
+								<div class="services color-2">
+									<span class="icon">
+										<i class="icon-phone3"></i>
+									</span>
+									<div class="desc">
+										<h3>Web</h3>
+										<p>JavaScript (Node.js, Angular, jQuery)<br>
+											HTML5<br>
+											CSS (Bootstrap)</p>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-4 text-center animate-box">
+								<div class="services color-3">
+									<span class="icon">
+										<i class="icon-data"></i>
+									</span>
+									<div class="desc">
+										<h3>Database</h3>
+										<p>MySQL, MongoDB</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-4 text-center animate-box">
+								<div class="services color-4">
+									<span class="icon">
+										<i class="icon-layers2"></i>
+									</span>
+									<div class="desc">
+										<h3>Tool</h3>
+										<p>Bash, PowerShell, Git, Docker, Jupiter Notebook</p>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-4 text-center animate-box">
+								<div class="services color-5">
+									<span class="icon">
+										<i class="icon-phone3"></i>
+									</span>
+									<div class="desc">
+										<h3>Application</h3>
+										<p>RESTful API, CI/CD, Microservices, Distributed System</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- <div class="col-md-4 text-center animate-box">
+							<div class="services color-6">
+								<span class="icon">
+									<i class="icon-phone3"></i>
+								</span>
+								<div class="desc">
+									<h3>Application</h3>
+									<p>Separated they live in Bookmarksgrove right at the coast of the Semantics</p>
+								</div>
+							</div>
+						</div> -->
+					</div>
+				</div>
+			</section>
+
+			<section class="education" data-section="education">
+				<div class="narrow-content">
+					<div class="row">
+						<div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
+							<span class="heading-meta">Education</span>
+							<h2 class="heading animate-box">Education</h2>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-12 animate-box" data-animate-effect="fadeInLeft">
+							<div class="fancy-collapse-panel">
+								<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+									<div class="panel panel-default">
+									    <div class="panel-heading" role="tab" id="headingOne">
+									        <h4 class="panel-title">
+									            <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">Bachelor Degree of Computer Engineering Co-op Program
+									            </a>
+									        </h4>
+									    </div>
+									    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+									         <div class="panel-body">
+												<h2>McGill University <span>Montreal, Quebec</span><span style="float:right">2013/09 - 2018/05</span></h2>
+												<p>This is where I learn programming is an extremely creative profession. It’s logic-based creativity.
+												</p>
+												Awards
+												<ul>
+													<li>Dean's Honour List and a cumulative GPA of 3.69/4.00</li>
+													<li>Engineering Class of 1953 SURE Award</li>
+													<li>Arthur Allan McAlear SURE Award</li>
+												</ul>
+									      		<!-- <div class="col-md-6">
+									      			<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. </p>
+									      		</div>
+									      		<div class="col-md-6">
+									      			<p>This is where I learn programming is an extremely creative profession. It’s logic-based creativity.</p>
+									      		</div> -->
+									         </div>
+									    </div>
+									</div>
+									<!-- <div class="panel panel-default">
+									    <div class="panel-heading" role="tab" id="headingTwo">
+									        <h4 class="panel-title">
+									            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">Bachelor Degree of Computer Science
+									            </a>
+									        </h4>
+									    </div>
+									    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+									        <div class="panel-body">
+									            <p>Far far away, behind the word <strong>mountains</strong>, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+													<ul>
+														<li>Separated they live in Bookmarksgrove right</li>
+														<li>Separated they live in Bookmarksgrove right</li>
+													</ul>
+									        </div>
+									    </div>
+									</div> -->
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="experience" data-section="experience">
+				<div class="narrow-content">
+					<div class="row">
+						<div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
+							<span class="heading-meta">Experience</span>
+							<h2 class="heading animate-box">Work Experience</h2>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-12">
+				         <div class="timeline-centered">
+					         <article class="timeline-entry animate-box" data-animate-effect="fadeInLeft">
+					            <div class="timeline-entry-inner">
+					               <div class="timeline-icon color-1">
+					                  <i class="icon-pen2"></i>
+					               </div>
+					               <div class="timeline-label">
+					                  <h2>Software Engineer <span>at Index Exchange Inc.</span><span style="float:right">2018/06 - Recent</span></h2>
+					                  <p>● Perl & Go based back-end Ad server feature implementation and deployment(CentOS, MySQL)<br>● Implemented Go back-end REST API in Gin framework with MySQL<br>● Analyzed and troubleshot production data by using Python Jupiter notebook</p>
+					               </div>
+					            </div>
+					         </article>
+
+					         <article class="timeline-entry animate-box" data-animate-effect="fadeInRight">
+					            <div class="timeline-entry-inner">
+					               <div class="timeline-icon color-2">
+					                  <i class="icon-pen2"></i>
+					               </div>
+								   <div class="timeline-label">
+					                  <h2>QA Automation Intern <span>at DRW</span><span style="float:right">2017/05 - 2017/08</span></h2>
+					                  <p>● Python DDT automation test case; React/Redux based front-end automation unit test case<br>● PowerShell scripting for TeamCity & Slack integration</p>
+					               </div>
+					            </div>
+					         </article>
+
+					         <article class="timeline-entry animate-box" data-animate-effect="fadeInLeft">
+					            <div class="timeline-entry-inner">
+					               <div class="timeline-icon color-3">
+					                  <i class="icon-pen2"></i>
+					               </div>
+								   <div class="timeline-label">
+					                  <h2>SW QA Develper Intern <span>at Kronos Canadian System Inc.</span><span style="float:right">2016/09 - 2017/04</span></h2>
+					                  <p>● Java programming for implementing TestNG API in customized automation testing framework<br>● Agile development of backend automation testing (REST API)</p>
+					               </div>
+					            </div>
+					         </article>
+
+					         <article class="timeline-entry animate-box" data-animate-effect="fadeInTop">
+					            <div class="timeline-entry-inner">
+					               <div class="timeline-icon color-4">
+					                  <i class="icon-pen2"></i>
+					               </div>
+								   <div class="timeline-label">
+					                  <h2>Software Developer <span>at TandemLaunch Inc.</span><span style="float:right">2015/06 - 2016/09</span></h2>
+					                  <p>● Developed Python GUI in PyQt, for converting, and analyzing the data generated by Gnuradio Companion</p>
+					               </div>
+					            </div>
+					         </article>
+
+					         <article class="timeline-entry animate-box" data-animate-effect="fadeInLeft">
+					            <div class="timeline-entry-inner">
+					               <div class="timeline-icon color-5">
+					                  <i class="icon-pen2"></i>
+					               </div>
+								   <div class="timeline-label">
+					                  <h2>Research Student <span>at McGill University</span><span style="float:right">2015/05 - 2015/12</span></h2>
+					                  <p>● Assisted research associates to implement wireless communication protocols<br>● Programmed in C++ to perform functional and performance testing for various protocols of ESP8266 Module</p>
+					               </div>
+					            </div>
+					         </article>
+
+					         <article class="timeline-entry begin animate-box" data-animate-effect="fadeInBottom">
+					            <div class="timeline-entry-inner">
+					               <div class="timeline-icon color-none">
+					               </div>
+					            </div>
+					         </article>
+					      </div>
+					   </div>
+				    </div>
+					<div class="row">
+						<div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
+							<h2 class="heading animate-box">Interests</h2>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-12">
+				         <div class="timeline-centered">
+					         <article class="timeline-entry animate-box" data-animate-effect="fadeInLeft">
+					            <div class="timeline-entry-inner">
+					               <div class="timeline-icon color-2">
+					                  <i class="icon-pen2"></i>
+					               </div>
+					               <div class="timeline-label">
+					                  <h2>Robotic Team Mentor <span>at Montreal EMSB</span><span style="float:right">2019/04 - Recent</span></h2>
+					                  <p>● Programming mentor for FRC and FLL team</p>
+					               </div>
+					            </div>
+					         </article>
+							 <article class="timeline-entry animate-box" data-animate-effect="fadeInLeft">
+					            <div class="timeline-entry-inner">
+					               <div class="timeline-icon color-3">
+					                  <i class="icon-pen2"></i>
+					               </div>
+					               <div class="timeline-label">
+					                  <h2>Programming Tutor <span></span><span style="float:right">2014/06 - Recent</span></h2>
+					                  <p>● Provide programming and algorithm class to students in one-to-one or group<br>● Tutor competitive programming topics</p>
+					               </div>
+					            </div>
+					         </article>
+					         <article class="timeline-entry begin animate-box" data-animate-effect="fadeInBottom">
+					            <div class="timeline-entry-inner">
+					               <div class="timeline-icon color-none">
+					               </div>
+					            </div>
+					         </article>
+					      </div>
+					   </div>
+				    </div>
+				</div>
+			</section>
+
+			<section class="blog" data-section="project">
+				<div class="narrow-content">
+					<div class="row">
+						<div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
+							<span class="heading-meta">Project</span>
+							<h2 class="heading">Project</h2>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-4 col-sm-6 animate-box" data-animate-effect="fadeInLeft">
+							<div class="blog-entry">
+								<a href="https://github.com/yan-ren/Speech-to-Text-DesignProject" class="blog-img"><img src="images/stt3.png" class="img-responsive" alt=""></a>
+								<div class="desc">
+									<span><small></small> | <small> Inspiration </small> | </span>
+									<h3><a href="https://github.com/yan-ren/Speech-to-Text-DesignProject">Web-based Speech to Text Application</a></h3>
+									<p>Use Node.js backend with Google Cloud Storage and Google Cloud Speech API, collaborating with Radio Canada Digital R&D team to develop a web based speech-to-text application</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-4 col-sm-6 animate-box" data-animate-effect="fadeInRight">
+							<div class="blog-entry">
+								<a href="https://yan-ren.github.io/FLL2018_Team_JSL/index.html" class="blog-img"><img src="images/fll_web.png" class="img-responsive" alt=""></a>
+								<div class="desc">
+									<span><small></small> | <small> Web Design </small> | </span>
+									<h3><a href="blog.html">FLL team space webpage</a></h3>
+									<p>Native HTML, CSS, JavaScript webpage for hosting FLL team competition pictures and viedos</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-4 col-sm-6 animate-box" data-animate-effect="fadeInLeft">
+							<div class="blog-entry">
+								<a href="https://github.com/yan-ren/CCC" class="blog-img"><img src="images/cp.jpg" class="img-responsive" alt=""></a>
+								<div class="desc">
+									<span><small></small> | <small> Inspiration </small> | </span>
+									<h3><a href="blog.html">Competitive Programming</a></h3>
+									<p>Various solutions for Canadian Computing Competition and Algorithm & Data Structure questions</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row" id="load-more" style="display: none;">
+						<div class="col-md-4 col-sm-6 animate-box" data-animate-effect="fadeInLeft">
+							<div class="blog-entry">
+								<a href="https://github.com/yan-ren/ComputerVision" class="blog-img"><img src="images/opencv.jpg" class="img-responsive" alt=""></a>
+								<div class="desc">
+									<span><small></small> | <small> Inspiration </small> | </span>
+									<h3><a href="blog.html">OpenCV Face Recognition and Pose Estimation</a></h3>
+									<p>Used OpenCV in C++, implemented Eigenfaces, Local Binary Pattern histograms and Bag of Visual Words for face recognition and pose estimation.</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-4 col-sm-6 animate-box" data-animate-effect="fadeInRight">
+							<div class="blog-entry">
+								<a href="https://github.com/yan-ren/pygame_development" class="blog-img"><img src="images/pygame.png" class="img-responsive" alt=""></a>
+								<div class="desc">
+									<span><small></small> | <small> Inspiration </small> | </span>
+									<h3><a href="blog.html">Python Pygame Development</a></h3>
+									<p>Writing game in Pygame library.</p>
+								</div>
+							</div>
+						</div>
+						<!-- <div class="col-md-4 col-sm-6 animate-box" data-animate-effect="fadeInLeft">
+							<div class="blog-entry">
+								<a href="blog.html" class="blog-img"><img src="images/blog-3.jpg" class="img-responsive" alt="HTML5 Bootstrap Template by colorlib.com"></a>
+								<div class="desc">
+									<span><small>April 14, 2018 </small> | <small> Inspiration </small> | <small> <i class="icon-bubble3"></i> 4</small></span>
+									<h3><a href="blog.html">Make website from scratch</a></h3>
+									<p>Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+								</div>
+							</div>
+						</div> -->
+					</div>
+					<div class="row">
+						<div class="col-md-12 animate-box">
+							<p><div class="btn btn-primary btn-lg btn-load-more" id="btn-load" onclick="LoadMore()">Load more <i class="icon-reload"></i></div></p>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="contact" data-section="contact">
+				<div class="narrow-content">
+					<div class="row">
+						<div class="col-md-6 col-md-offset-3 col-md-pull-3 animate-box" data-animate-effect="fadeInLeft">
+							<span class="heading-meta">Get in Touch</span>
+							<h2 class="heading">Contact</h2>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-5">
+							<div class="feature feature-sm animate-box" data-animate-effect="fadeInLeft">
+								<div class="icon">
+									<i class="icon-globe-outline"></i>
+								</div>
+								<div class="text">
+									<p>ryan.ren3@gmail.com</p>
+								</div>
+							</div>
+
+							<div class="feature feature-sm animate-box" data-animate-effect="fadeInLeft">
+								<div class="icon">
+									<i class="icon-map"></i>
+								</div>
+								<div class="text">
+									<p>Montreal, Quebec</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-7 col-md-push-1">
+							<div class="row">
+								<div class="col-md-10 col-md-offset-1 col-md-pull-1 animate-box" data-animate-effect="fadeInRight">
+									<form class="gform" action="https://script.google.com/macros/s/AKfycbySd0kXkJDv-ziue-W-oYad57JjaT8-8G0V3HVc/exec">
+										<div class="form-group">
+											<input type="text" name="name" class="form-control" placeholder="Name">
+										</div>
+										<div class="form-group">
+											<input type="email" name="email" class="form-control" placeholder="Email">
+										</div>
+										<div class="form-group">
+											<input type="text" name="subject" class="form-control" placeholder="Subject">
+										</div>
+										<div class="form-group">
+											<textarea name="message" id="message" cols="30" rows="7" class="form-control" placeholder="Send me message, I will get back to you as soon as possible!"></textarea>
+										</div>
+										<div class="form-group">
+											<input type="submit" class="btn btn-primary btn-send-message" value="Send Message To My Email">
+										</div>
+									</form>
+								</div>
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+		</div><!-- end:main -->
+	</div><!-- end:container-wrap -->
+	</div><!-- end:page -->
+
+	<!-- jQuery -->
+	<!-- <script src="js/jquery.min.js"></script> -->
+	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<!-- jQuery Easing -->
+	<script src="js/jquery.easing.1.3.js"></script>
+	<!-- Bootstrap -->
+	<script src="js/bootstrap.min.js"></script>
+	<!-- Waypoints -->
+	<script src="js/jquery.waypoints.min.js"></script>
+	<!-- Flexslider -->
+	<script src="js/jquery.flexslider-min.js"></script>
+	<!-- Owl carousel -->
+	<script src="js/owl.carousel.min.js"></script>
+	<!-- Counters -->
+	<script src="js/jquery.countTo.js"></script>
+
+	<script data-cfasync="false" type="text/javascript" src="js/form-submission-handler.js"></script>
+
+	<!-- MAIN JS -->
+	<script src="js/main.js"></script>
+
+	</body>
 </html>
